@@ -1,21 +1,7 @@
-# TS and Node.Js Starter
+# Roomey - `( Starting Template )`
 
-```js
-//install all dependency
-npm install
-```
+This is a basic template for Roomey that we use as a starting point for every new service we create. Whenever we start a new project, we clone this repository and begin coding from there. You are welcome to contribute to this repository and help make it even better. We believe this is a great starting point for building high-quality services with Roomey
 
-```js
-//run in development mode
-npm run dev
-```
+**Warning:**
 
-```js
-// build Ts
-npm run build
-```
-
-```js
-//run in production mode
-npm run prodxn
-```
+> Please don't merge any pull request without my permission
