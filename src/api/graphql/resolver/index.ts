@@ -1,9 +1,10 @@
-import { books } from "../../../model";
+import { Resolver, Query } from "type-graphql";
+import { Person } from "../schema";
 
-// Resolvers define how to fetch the types defined in your schema.
-// This resolver retrieves books from the "books" array above.
-export const resolvers = {
-  Query: {
-    books: () => books,
-  },
-};
+@Resolver()
+export class Resolvers {
+  @Query(() => Person)
+  person() {
+    return { name: "Alice", age: 30 };
+  }
+}

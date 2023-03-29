@@ -1,16 +1,10 @@
-import { buildSchema } from "graphql";
+import { ObjectType, Field, Query } from "type-graphql";
 
-// A schema is a collection of type definitions (hence "typeDefs")
-// that together define the "shape" of queries that are executed against
-// your data.
-export const typeDefs = buildSchema(`
-  type Book {
-    title: String
-    author: String
-  }
+@ObjectType()
+export class Person {
+  @Field(() => String)
+  name: string;
 
-  type Query {
-    books: [Book]
-  }
-
-`);
+  @Field(() => Number)
+  age: number;
+}

@@ -2,14 +2,12 @@ import "reflect-metadata";
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import { buildSchema } from "type-graphql";
-import { PersonResolver } from "./user";
+import { Resolvers } from "./api/graphql/resolver";
 
 async function startApolloServer() {
   // build the schema
   const schema = await buildSchema({
-    resolvers: [PersonResolver],
-    emitSchemaFile: true, // generate a GraphQL schema file
-    validate: false, // disable validation to avoid warnings
+    resolvers: [Resolvers],
   });
 
   // create an Apollo server instance
