@@ -58,41 +58,28 @@ async function startApolloServer() {
       //   },
       // },
     ],
-    formatError: (formattedError: formattedError) => {
-      console.log(formattedError.extensions?.code);
-      // Return a different error message
-      if (
-        formattedError.extensions?.code ===
-        ApolloServerErrorCode.INTERNAL_SERVER_ERROR
-      ) {
-        return {
-          ...formattedError,
-          message: "Rate limit exceeded. Please try again in 30 minutes.",
-          extensions: {
-            ...formattedError.extensions,
-            code: "RATE_LIMIT_EXCEEDED",
-            http: { status: 429 },
-            retryAfter: 1800, // retry after 30 minutes in seconds
-          },
-        };
-      }
-      // else if (formattedError.extensions?.code === "UNAUTHORIZED") {
-      //   console.log("here");
-      //   return {
-      //     ...formattedError,
-      //     message: "User Not Authorized.",
-      //     extensions: {
-      //       ...formattedError.extensions,
-      //       code: "UNAUTHORIZED",
-      //       http: { status: 401 },
-      //     },
-      //   };
-      // }
+    // formatError: (formattedError: formattedError) => {
+    //   // Return a different error message
+    //   if (
+    //     formattedError.extensions?.code ===
+    //     ApolloServerErrorCode.INTERNAL_SERVER_ERROR
+    //   ) {
+    //     return {
+    //       ...formattedError,
+    //       message: "Rate limit exceeded. Please try again in 30 minutes.",
+    //       extensions: {
+    //         ...formattedError.extensions,
+    //         code: "RATE_LIMIT_EXCEEDED",
+    //         http: { status: 429 },
+    //         retryAfter: 1800, // retry after 30 minutes in seconds
+    //       },
+    //     };
+    //   }
 
-      // Otherwise return the formatted error. This error can also
-      // be manipulated in other ways, as long as it's returned.
-      return formattedError;
-    },
+    //   // Otherwise return the formatted error. This error can also
+    //   // be manipulated in other ways, as long as it's returned.
+    //   return formattedError;
+    // },
   });
 
   await server.start();
