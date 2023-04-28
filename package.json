@@ -11,8 +11,7 @@
     "build": "tsc",
     "test": "jest --detectOpenHandles",
     "prod": "nodemon --es-module-specifier-resolution=node dist/index.js",
-    "pm2": "pm2 start ts-node --name app -- -r tsconfig-paths/register ./src/index.ts",
-    "permissions": " nodemon -x node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm ./src/config/saveRolesPermission.ts"
+    "pm2": "pm2 start ./build/index.ts"
   },
   "dependencies": {
     "@apollo/server": "^4.5.0",

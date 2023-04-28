@@ -1,22 +1,22 @@
-## Folders - `Controller`:
+# Starting Template for typescript, apollo server 4 with express, graphql
 
-Resolver files does not need to contain the whole argorithms by thier selfs, but we will use controller to separate and manage the algorithms and finally pass to resolver
+### Run in Dev mode
 
----
+```
+npm run dev
+```
 
-<br>
+### Build Typescript
 
-## Needs - `Hundler` :</u>
+```
+npm run build
+```
 
-> - DB Query
-> - bcrypt
->
-> please consider to hundle any exception regarding.
-> use catch(()=>{....})
+### Build and Run
 
-<br>
-
----
+```
+npm start
+```
 
 ## Naming Classes & Methods
 
