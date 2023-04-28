@@ -1,0 +1,31 @@
+#####################################################
+## Please install the following Vs code extension  ##
+##  1. GraphQL                                     ##
+##  2. GraphQL: Language Feature Support           ##
+#####################################################
+
+## Mutation - Login + Registration
+type Mutation {
+  login(email: String!, password: String!): User!
+}
+
+input UserProfileInput {
+  name: String
+  email: String
+  phoneNumber: String
+}
+
+type User {
+  _id: ID!
+  name: String!
+  email: String!
+  role: [String!]! #MIN_ROLE: CUSTOMER
+  twoFAEnabled: Boolean!
+}
+
+##############################
+# Not yet used, just example #
+##############################
+type Query {
+  userProfile: User!
+}
