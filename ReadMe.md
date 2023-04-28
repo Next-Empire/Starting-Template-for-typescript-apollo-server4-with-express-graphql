@@ -18,29 +18,9 @@ npm run build
 npm start
 ```
 
-## Naming Classes & Methods
-
-> - Use `camelCase` for **method names**: This means that the first word is in lowercase, and subsequent words are capitalized. For example: `getUserById`, `calculateTotalPrice`, `sendMessage`.
->
-> - Use `PascalCase` for **class names**: This means that the first letter of each word is capitalized. For example: `UserController`, `ProductModel`, `OrderService`.
->
-> - Use `verbs` for **method names**: Method names should typically start with a verb that describes the action that the method performs. For example: `getUserById`, `createOrder`, `sendEmail`.
->
-> - Use `nouns` for **class names**: Class names should typically be nouns or noun phrases that describe the entity or concept that the class represents. For example: `User`, `Product`, `Order`.
->
-> - `Avoid generic names`: Try to avoid using generic names like Manager, Handler, or Processor for classes and methods. These names do not provide much information about what the class or method does.
->
-> - `Be consistent`: Use consistent naming conventions throughout your codebase. This makes it easier for other developers to understand and navigate your code.
->
-> - Use `domain-specific language`: When naming classes and methods, try to use domain-specific language that is relevant to the problem domain that you are working in. For example, if you are building an e-commerce application, use names like Product, Order, and Customer.
-
 ---
 
-<br>
-
----
-
-## Creating self signed certificate
+## Creating self signed certificate to test under local host
 
 If you are working with a local development environment and you need to generate an SSL/TLS certificate for a domain name that is not publicly accessible (e.g., localhost), you can create a self-signed certificate that is valid for your specific domain name or IP address.
 
